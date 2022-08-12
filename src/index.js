@@ -1,7 +1,3 @@
-// const cards = [
-//   {name: "Ace", suite: "♠️", value: 1 || 11, img:""},
-//   {name: "King", suite: "♠️", value: 10, img:""},
-//   {name: "Queen", suite: "♠️", value: 10, img:""},
-//   {name: "Jack", suite: "♠️", value: 10, img:""}
+// const newGame = new Game('table one', ['Dealer', 'Name1'], 1);
 
-// ];
+// console.log({ newGame, players: newGame.players, deck: newGame.players[0].cardsInTotalDeck, deckLength: newGame.players[0].cardsInTotalDeck.length })

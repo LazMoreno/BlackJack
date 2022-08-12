@@ -1,15 +1,24 @@
 //console.log("Hello World")
-const cards = [
-  {name: "Ace", suite: "♠️", value: 1 || 11, img:""},
-  {name: "King", suite: "♠️", value: 10, img:""},
-  {name: "Queen", suite: "♠️", value: 10, img:""},
-  {name: "Jack", suite: "♠️", value: 10, img:""}
 
-];
 
-console.log(cards);
-class blackJackGame {
-  constructor(cards) {
+class Game {
+  constructor(tableName, playersArray, numberOfDecks) {
+    this.players = [];
+    this.tableName = tableName
+    this.howManyPlayers = playersArray
+    this.numberOfDecks = numberOfDecks
+    this.generatePlayers()
   }
-  
+
+  generatePlayers() {
+    this.howManyPlayers.forEach(player => {
+      this.players.push(player.toLowerCase() === 'dealer' ? new Dealer(this.numberOfDecks) : new Player(player, 1000))
+    })
+  }
+
+  addPlayer(playerName) {
+    this.players.push(new Player(playerName, 1000))
+  }
+
+
 }
